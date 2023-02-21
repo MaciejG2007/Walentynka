@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+				<meta name="viewport" content="width=device-width">
+        <title>Siuuu</title>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="book-content">
+                <div class="book">
+                    <div class="face-front" id="p1" class="color">
+                    </div>
+                    <div class="face-back" id="trsf">
+											<span class="heart"></span>
+											<h1>Dla Majora Suchodolskiego</h1>
+											<p class="text9">"Choć nie jestem milionerem<br>
+												Choć nie jeżdżę land roverem.<br>
+												Chociaż rzadko pijam whisky,<br>
+												Nie wyglądam jak Olbrychski.<br>
+												Chociaż nie używam Ace,<br>
+												Ani ubrań od Versace.<br>
+												W piłkę nie gram jak Gadocha,<br>
+												to nad życie Ciebie kocham!"<br>
+												<br>Credit to 'Adam Mickiewicz'
+											<br>
+										<br>
+									<br>
+													<br>
+												<br>Od X</p>
+                    </div>
+                </div>
+                <div class="book">
+                    <div class="face-back">
+											<div class="tenor-gif-embed" data-postid="26441887" data-share-method="host" data-aspect-ratio="1.01587" data-width="100%"><a href="https://tenor.com/view/the-rock-the-rock-meme-dwayne-johnson-hd-gif-26441887">The Rock The Rock Meme GIF</a>from <a href="https://tenor.com/search/the+rock-gifs">The Rock GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+                    </div>
+                </div>
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            *{
+	padding: 0;
+	margin: 0;
+	font-family: 'Lucida Sans';
+}
+p{
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: justify;
+}
+.container, .book-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    font-family: 'Lucida Sans';
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(to bottom,pink,purple,rgb(255, 0, 149));
+    font-family: 'Lucida Sans';
+}
+.text9 {
+	text-align: center;
+	font-size: 15px;
+}
+.book-content{
+	width: 65%;
+	min-width: 500px;
+	max-width: 850px;
+	height: 750px;
+	perspective: 1000px;
+	transition: 0.15s;
+    margin:auto
+    font-family: 'Lucida Sans';
+}
+.book{
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	transition: 1s;
+	transform-style: preserve-3d;
+	transform-origin: left; 
+    margin-bottom: 50px;
+    margin-left: 565px;
+	margin-top:40px;
+    font-family: 'Lucida Sans';
+}
+.face-front, .face-back{
+    text-align: center;
+    width: 100%;
+	height: 100%;
+	background: white;
+	padding: 30px;
+	box-sizing: border-box;
+	overflow: hidden;
+    align-items: center;
+    background-color: pink;
+    background-size: cover;
+    font-family: 'Lucida Sans';
+    border: 12px solid rgb(146, 0, 146);
+}
+.face-front{
+	
+    box-shadow: inset 3px 0px 20px -7px black;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+    align-items: center;
+    font-family: 'Lucida Sans';
+}
+.heart {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: #ff0000;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  color: transparent;
+  margin: 0 50px;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 0.7s;
+}
+
+.heart::after, .heart::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+.heart::after {
+  top: -50%;
+  left: 0;
+}
+.face-back{
+	margin-bottom: 100px;
+	padding: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateZ(-1px) rotateY(180deg);
+	box-shadow: inset -3px 1px 20px -7px black;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+    font-family: 'Lucida Sans';
+}
+
+#p1{
+	background-image: url('img/witchman2.jpg');
+}
+#p2-back{
+	background-image: url('img/witchman3.jpg');
+}
+#p1, #p2-back{
+	background-size: 100% 100%;
+}
+.trnsf{
+	transform: translateX(80px);
+}
+.trnsf-reset{
+	transform: translateX(0px);
+}
+@media screen and (max-width: 800px){
+	p{
+		font-size: 12px;
+	}
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.3) rotate(45deg);
+  }
+  100% {
+    transform: scale(1) rotate(45deg);
+  }
+}
+
+
+        </style>
+        <script>
+            var front = document.querySelector('.face-front');
+var back = document.querySelector('.face-back');
+var flip = document.querySelector('.book-content');
+var uno = document.querySelectorAll('.book');
+var portada = document.querySelectorAll('#portada');
+
+var contZindex = 2;
+var customZindex = 1;
+
+for (var i = 0; i < uno.length; i++) {
+	uno[i].style.zIndex = customZindex;
+	customZindex--;
+
+	uno[i].addEventListener('click', function(e){
+
+		var tgt = e.target;
+		var unoThis = this;
+
+		unoThis.style.zIndex = contZindex;
+		contZindex++;
+
+		if (tgt.getAttribute('class') == 'face-front') {
+			unoThis.style.zIndex = contZindex;
+			contZindex +=20;
+			setTimeout(function(){
+				unoThis.style.transform = 'rotateY(-180deg)';
+			}, 500);
+		}
+		if (tgt.getAttribute("class") == 'face-back') {
+			unoThis.style.zIndex = contZindex;
+			contZindex +=20;
+
+			setTimeout(function(){
+				unoThis.style.transform = 'rotateY(0deg)';
+			}, 500);
+		}
+
+		if (tgt.getAttribute('id') == 'portada') {
+			flip.classList.remove("trnsf-reset");
+			flip.classList.add("trnsf");
+		}
+		if (tgt.getAttribute('id') == 'trsf') {
+			flip.classList.remove("trnsf");
+			flip.classList.add("trnsf-reset");
+		}
+
+	});
+}
+        </script>
+    </body>
+</html>
